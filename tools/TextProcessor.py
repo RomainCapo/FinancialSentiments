@@ -5,7 +5,7 @@ import en_core_web_sm
 import string
 import spacy
 
-nlp = spacy.load('en')
+nlp = spacy.load('en_core_web_sm')
 class TextProcessor(BaseEstimator, TransformerMixin):
     '''Class use in pipeline to processing the text'''
     def __init__(self, remove_stop_word=False, keep_only_good_word=True, min_word_size=2, is_word_joined=True):
