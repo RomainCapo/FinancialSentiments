@@ -46,8 +46,8 @@ class TextProcessor(BaseEstimator, TransformerMixin):
                     continue
                     
             if word.text not in self.punctuations:
-                final_sentence.append(word.lemma_)
-                self.vocab.add(word.lemma_)
+                final_sentence.append(word.lemma_.lower())
+                self.vocab.add(word.lemma_.lower())
         return final_sentence
         
     def transform(self, X, y=None):
